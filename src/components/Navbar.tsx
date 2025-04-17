@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
       <div className="flex items-center">
         <Pin className="text-toon-orange mr-2" />
         <h1 className="text-xl font-bold bg-gradient-to-r from-toon-orange to-toon-purple bg-clip-text text-transparent">
-          Sticky Toon Notes
+          WRIT{•"•}OS
         </h1>
       </div>
       
