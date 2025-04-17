@@ -1,7 +1,9 @@
 
 import React from "react";
-import { Search, Palette, Pin, MoonStar } from "lucide-react";
+import { Search, Palette, MoonStar, Sun } from "lucide-react";
 import { Input } from "./ui/input";
+import { Switch } from "./ui/switch";
+import { useTheme } from "next-themes";
 
 type NavbarProps = {
   searchTerm: string;
@@ -9,8 +11,14 @@ type NavbarProps = {
 };
 
 const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <div className="bg-white shadow-sm p-4 flex items-center justify-between sticky top-0 z-40">
+    <div className="bg-white dark:bg-background shadow-sm p-4 flex items-center justify-between sticky top-0 z-40">
       <div className="flex items-center">
         <Pin className="text-toon-orange mr-2" />
         <h1 className="text-xl font-bold bg-gradient-to-r from-toon-orange to-toon-purple bg-clip-text text-transparent">
@@ -30,12 +38,17 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
       </div>
       
       <div className="flex items-center space-x-2">
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <Palette size={20} className="text-gray-600" />
+        <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+          <Palette size={20} className="text-gray-600 dark:text-gray-300" />
         </button>
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <MoonStar size={20} className="text-gray-600" />
-        </button>
+        <div className="flex items-center space-x-2">
+          {theme === "dark" ? <Sun size={20} className="text-gray-300" /> : <MoonStar size={20} className="text-gray-600" />}
+          <Switch 
+            checked={theme === "dark"} 
+            onCheckedChange={toggleTheme}
+            aria-label="Toggle dark mode"
+          />
+        </div>
       </div>
     </div>
   );
