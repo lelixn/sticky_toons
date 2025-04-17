@@ -1,8 +1,7 @@
 
 import React from "react";
-import { Search, Palette, MoonStar, Sun } from "lucide-react";
+import { Search, Palette } from "lucide-react";
 import { Input } from "./ui/input";
-import { Switch } from "./ui/switch";
 import { useTheme } from "next-themes";
 import Pin from "./Pin";
 
@@ -42,14 +41,12 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
         <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
           <Palette size={20} className="text-gray-600 dark:text-gray-300" />
         </button>
-        <div className="flex items-center space-x-2">
-          {theme === "dark" ? <Sun size={20} className="text-gray-300" /> : <MoonStar size={20} className="text-gray-600" />}
-          <Switch 
-            checked={theme === "dark"} 
-            onCheckedChange={toggleTheme}
-            aria-label="Toggle dark mode"
-          />
-        </div>
+        <img 
+          src="/lovable-uploads/e95ae6f5-a026-4cf4-97c8-36583027145a.png" 
+          alt="Theme Toggle" 
+          onClick={toggleTheme}
+          className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform"
+        />
       </div>
     </div>
   );
