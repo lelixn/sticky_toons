@@ -4,6 +4,7 @@ import { Search, Palette, MoonStar, Sun } from "lucide-react";
 import { Input } from "./ui/input";
 import { Switch } from "./ui/switch";
 import { useTheme } from "next-themes";
+import Pin from "./Pin";
 
 type NavbarProps = {
   searchTerm: string;
