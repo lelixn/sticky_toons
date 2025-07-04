@@ -30,11 +30,11 @@
    git clone https://github.com/lelixn/sticky_toons.git
    cd sticky_toons
    ```
-###2. Install Dependencies
+### 2. Install Dependencies
    ```
    npm install
    ```
-###3. Run the App
+### 3. Run the App
    ```
    npm run dev
    ```
