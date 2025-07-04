@@ -54,4 +54,4 @@
 This project is licensed under the MIT License.
 > “Notes are the sketches of ideas — capture them beautifully.”
 
-Made with ❤️ by Lelien Panda [https://github.com/lelixn]
+Made with ❤️ by [Lelien Panda] (https://github.com/lelixn)
