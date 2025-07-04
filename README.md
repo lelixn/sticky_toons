@@ -27,8 +27,8 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/lelixn/sticky_toons.git
-cd sticky_toons
+   git clone https://github.com/lelixn/sticky_toons.git
+   cd sticky_toons
 ```
 2. Install Dependencies
    ```
@@ -41,13 +41,13 @@ cd sticky_toons
 
 ###📁 Project Structure
   ```
-  src/
-├── Components/       # Note cards, editor, navbar, etc.
-├── Screens/          # Home or Notes screen
-├── Redux/ or Context # State management (if used)
-├── styles/           # Tailwind configs or custom CSS
-├── main.jsx
-└── App.jsx
+     src/
+   ├── Components/       # Note cards, editor, navbar, etc.
+   ├── Screens/          # Home or Notes screen
+   ├── Redux/ or Context # State management (if used)
+   ├── styles/           # Tailwind configs or custom CSS
+   ├── main.jsx
+   └── App.jsx
 ```
 
 📜 License
