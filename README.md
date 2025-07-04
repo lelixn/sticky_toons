@@ -39,7 +39,7 @@
    npm run dev
    ```
 
-###📁 Project Structure
+### 📁 Project Structure
    ```
      src/
    ├── Components/       # Note cards, editor, navbar, etc.
